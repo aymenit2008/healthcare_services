@@ -1,0 +1,75 @@
+{
+ "allow_import": 1,
+ "autoname": "field:dist_id",
+ "creation": "2021-07-05 14:14:14.722725",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "dist_id",
+  "dist_name_en",
+  "dist_name_ar",
+  "gov_id",
+  "is_enable"
+ ],
+ "fields": [
+  {
+   "fieldname": "dist_id",
+   "fieldtype": "Data",
+   "label": "DISTRICT ID",
+   "unique": 1
+  },
+  {
+   "fieldname": "dist_name_en",
+   "fieldtype": "Data",
+   "label": "DISTRICT NAME EN"
+  },
+  {
+   "fieldname": "dist_name_ar",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "DISTRICT NAME AR",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gov_id",
+   "fieldtype": "Link",
+   "label": "Gov Id",
+   "options": "Governorate",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "is_enable",
+   "fieldtype": "Check",
+   "label": "Enable"
+  }
+ ],
+ "modified": "2021-07-05 14:29:33.683398",
+ "modified_by": "Administrator",
+ "module": "Healthcare Services",
+ "name": "District",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "dist_name_en,dist_name_ar",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "dist_name_ar",
+ "track_changes": 1
+}

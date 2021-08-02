@@ -1,0 +1,58 @@
+{
+ "creation": "2021-07-13 17:23:31.679775",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "dep_name",
+  "ded_num",
+  "emp_num",
+  "ded_final"
+ ],
+ "fields": [
+  {
+   "fieldname": "dep_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Department",
+   "options": "Service Department",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "ded_num",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Absent Day",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "emp_num",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Employee Num",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "ded_final",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Final Deduction",
+   "read_only": 1,
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-07-13 19:02:02.488872",
+ "modified_by": "Administrator",
+ "module": "Healthcare Services",
+ "name": "Department Deductions",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

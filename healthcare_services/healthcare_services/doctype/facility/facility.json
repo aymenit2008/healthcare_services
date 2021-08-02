@@ -1,0 +1,135 @@
+{
+ "allow_import": 1,
+ "autoname": "field:facility_id",
+ "creation": "2021-07-06 23:55:36.324297",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "facility_id",
+  "name_ar",
+  "name_en",
+  "facility_type",
+  "facility_sub_type",
+  "f_type",
+  "gov_id",
+  "dist_id",
+  "village_id",
+  "longitude",
+  "latitude",
+  "operation_year",
+  "is_enable",
+  "column_break_14",
+  "ind_price_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "facility_id",
+   "fieldtype": "Data",
+   "label": "Facility Id",
+   "unique": 1
+  },
+  {
+   "fieldname": "name_ar",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name Ar",
+   "reqd": 1
+  },
+  {
+   "fieldname": "name_en",
+   "fieldtype": "Data",
+   "label": "Name En"
+  },
+  {
+   "fieldname": "facility_type",
+   "fieldtype": "Data",
+   "label": "Facility Type"
+  },
+  {
+   "fieldname": "facility_sub_type",
+   "fieldtype": "Data",
+   "label": "Facility Sub Type"
+  },
+  {
+   "fieldname": "f_type",
+   "fieldtype": "Data",
+   "label": "F Type"
+  },
+  {
+   "fieldname": "gov_id",
+   "fieldtype": "Link",
+   "label": "Gov Id",
+   "options": "Governorate"
+  },
+  {
+   "fieldname": "dist_id",
+   "fieldtype": "Link",
+   "label": "Dist Id",
+   "options": "District"
+  },
+  {
+   "fieldname": "village_id",
+   "fieldtype": "Data",
+   "label": "Village"
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Data",
+   "label": "longitude"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Data",
+   "label": "latitude"
+  },
+  {
+   "fieldname": "operation_year",
+   "fieldtype": "Data",
+   "label": "Operation Year"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_enable",
+   "fieldtype": "Check",
+   "label": "Enable",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ind_price_id",
+   "fieldtype": "Link",
+   "label": "Indicator Price",
+   "options": "Indicator Price"
+  }
+ ],
+ "modified": "2021-07-10 01:44:05.283412",
+ "modified_by": "Administrator",
+ "module": "Healthcare Services",
+ "name": "Facility",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "name_ar",
+ "show_preview_popup": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "name_ar",
+ "track_changes": 1
+}

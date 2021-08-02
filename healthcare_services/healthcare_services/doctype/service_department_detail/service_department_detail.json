@@ -1,0 +1,66 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2021-07-07 23:23:41.412324",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "ser_code",
+  "ser_name",
+  "real_weight",
+  "fixed_service_point"
+ ],
+ "fields": [
+  {
+   "default": "S-D-D-.YYYY.-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "S-D-D-.YYYY.-",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "real_weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Real weight"
+  },
+  {
+   "fieldname": "fixed_service_point",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Fixed Service Points"
+  },
+  {
+   "fieldname": "ser_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service code",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "ser_code.item_name",
+   "fieldname": "ser_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Service Name",
+   "read_only": 1,
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-07-08 20:39:01.135648",
+ "modified_by": "Administrator",
+ "module": "Healthcare Services",
+ "name": "Service Department Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

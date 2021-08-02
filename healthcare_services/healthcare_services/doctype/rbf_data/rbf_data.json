@@ -1,0 +1,159 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2021-07-09 16:59:42.152826",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "date",
+  "facility_id",
+  "ind_price_id",
+  "medical_supply",
+  "incentive",
+  "column_break_5",
+  "equity_bounce",
+  "quality_bounce",
+  "fraud",
+  "ded_cost",
+  "service_data_section",
+  "service_detail",
+  "dud_dep",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "RBF-.YYYY.-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "RBF-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "facility_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Facility Name",
+   "options": "Facility",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "equity_bounce",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Equity bounce",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "RBF Data",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "quality_bounce",
+   "fieldtype": "Float",
+   "label": "Quality bounce",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "fraud",
+   "fieldtype": "Float",
+   "label": "Fraud",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "facility_id.ind_price_id",
+   "fieldname": "ind_price_id",
+   "fieldtype": "Link",
+   "label": "Indicator Price",
+   "options": "Indicator Price",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "service_data_section",
+   "fieldtype": "Section Break",
+   "label": "Service Data"
+  },
+  {
+   "fieldname": "service_detail",
+   "fieldtype": "Table",
+   "label": "Service Detail",
+   "options": "Service Detail"
+  },
+  {
+   "fetch_from": "ind_price_id.medical_supply",
+   "fieldname": "medical_supply",
+   "fieldtype": "Percent",
+   "label": "Medical Supply %",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "ind_price_id.incentive",
+   "fieldname": "incentive",
+   "fieldtype": "Percent",
+   "label": "Incentives %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "dud_dep",
+   "fieldtype": "Table",
+   "label": "Department Deductions",
+   "options": "Department Deductions"
+  },
+  {
+   "fetch_from": "ind_price_id.ded_cost",
+   "fieldname": "ded_cost",
+   "fieldtype": "Float",
+   "label": "Deduction Cost",
+   "read_only": 1,
+   "reqd": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-07-14 00:49:02.650385",
+ "modified_by": "Administrator",
+ "module": "Healthcare Services",
+ "name": "RBF Data",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1
+}

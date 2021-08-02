@@ -1,0 +1,121 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2021-07-07 23:53:39.681701",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "date",
+  "medical_supply",
+  "incentive",
+  "unit_price",
+  "column_break_6",
+  "ded_cost",
+  "section_break_8",
+  "service_detail",
+  "service_dep_detail",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "I-P-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "unit_price",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Unit Price",
+   "reqd": 1
+  },
+  {
+   "fieldname": "service_detail",
+   "fieldtype": "Table",
+   "label": "Service Detail",
+   "options": "Service Detail"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Indicator Price",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "service_dep_detail",
+   "fieldtype": "Table",
+   "label": "Service Department",
+   "options": "Service Department Indicator"
+  },
+  {
+   "default": "0",
+   "fieldname": "medical_supply",
+   "fieldtype": "Percent",
+   "label": "Medical Supply %",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "incentive",
+   "fieldtype": "Percent",
+   "label": "Incentives %",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "ded_cost",
+   "fieldtype": "Float",
+   "label": "Deduction Cost",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-07-13 19:08:10.828156",
+ "modified_by": "Administrator",
+ "module": "Healthcare Services",
+ "name": "Indicator Price",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

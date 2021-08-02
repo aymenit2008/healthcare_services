@@ -1,0 +1,87 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2021-07-07 23:35:05.024012",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "ser_code",
+  "ser_name",
+  "ser_price",
+  "ser_weight",
+  "ser_no",
+  "ser_cost"
+ ],
+ "fields": [
+  {
+   "default": "S-D-.YYYY.-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "S-D-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ser_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service code",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "ser_price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "price",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "ser_weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "weight",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "ser_code.item_name",
+   "fieldname": "ser_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Service Name",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "ser_no",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "NO of services ",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "ser_cost",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Costs",
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-07-11 23:34:27.548420",
+ "modified_by": "Administrator",
+ "module": "Healthcare Services",
+ "name": "Service Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
