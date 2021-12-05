@@ -8,6 +8,7 @@
   "naming_series",
   "date",
   "facility_id",
+  "facility_name",
   "ind_price_id",
   "medical_supply",
   "incentive",
@@ -129,10 +130,17 @@
    "label": "Deduction Cost",
    "read_only": 1,
    "reqd": 1
+  },
+  {
+   "fetch_from": "facility_id.name_ar",
+   "fieldname": "facility_name",
+   "fieldtype": "Data",
+   "label": "Facility Name",
+   "read_only": 1
   }
  ],
  "is_submittable": 1,
- "modified": "2021-07-14 00:49:02.650385",
+ "modified": "2021-08-14 23:01:43.697462",
  "modified_by": "Administrator",
  "module": "Healthcare Services",
  "name": "RBF Data",
