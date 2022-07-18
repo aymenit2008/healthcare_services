@@ -1,0 +1,10 @@
+{
+	"css/healthcare_services.css": [
+		"public/js/pivotjs/pivotrtl.css"
+
+
+	],
+"js/healthcare_services.min.js": [		
+		"public/js/pivotjs/pivot.min.js"
+	]
+}

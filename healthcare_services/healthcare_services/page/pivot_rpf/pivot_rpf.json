@@ -1,0 +1,25 @@
+{
+ "content": null,
+ "creation": "2022-06-02 18:23:10.289868",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2022-06-02 18:23:10.289868",
+ "modified_by": "Administrator",
+ "module": "Healthcare Services",
+ "name": "pivot_rpf",
+ "owner": "Administrator",
+ "page_name": "Pivot_RPF",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Healthcare Administrator"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0
+}
