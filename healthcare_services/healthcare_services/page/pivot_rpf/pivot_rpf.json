@@ -4,7 +4,7 @@
  "docstatus": 0,
  "doctype": "Page",
  "idx": 0,
- "modified": "2022-06-02 18:23:10.289868",
+ "modified": "2022-07-25 21:41:50.978935",
  "modified_by": "Administrator",
  "module": "Healthcare Services",
  "name": "pivot_rpf",
@@ -16,10 +16,13 @@
   },
   {
    "role": "Healthcare Administrator"
+  },
+  {
+   "role": "RBF user"
   }
  ],
  "script": null,
  "standard": "Yes",
  "style": null,
- "system_page": 0
+ "system_page": 1
 }

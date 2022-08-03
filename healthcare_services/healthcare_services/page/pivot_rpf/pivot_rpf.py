@@ -19,7 +19,12 @@ class pivot_rpf(Document):
 @frappe.whitelist()
 def pivot_rpf_q(date ,date2):
 	data = []
-	data_rpf = frappe.db.sql(""" select a.date , a.facility_name ,b.* from `tabRBF Data` a , `tabService Detail` b where a.name= b.parent 
+	data_rpf = frappe.db.sql(""" select a.date as 'Date' , a.facility_name as 'Facility Name', b.ser_name as 'Service Name', a.ind_price_id as 'Indicator Price'
+	   , b.ser_no as 'Service Nubmer'  , QUARTER(a.date) as 'Quarter'
+	  ,(b.ser_price * b.ser_no) as cost,(a.quality_bounce *(b.ser_price * b.ser_no))+(b.ser_price * b.ser_no) as 'net with quality',(a.quality_bounce *(b.ser_price * b.ser_no))+(b.ser_price * b.ser_no) as 'net after deduction'
+	  ,((a.quality_bounce *(b.ser_price * b.ser_no))+(b.ser_price * b.ser_no)/100) * a.medical_supply as 'Medical Supply'
+	  ,((a.quality_bounce *(b.ser_price * b.ser_no))+(b.ser_price * b.ser_no)/100) * a.incentive as 'incentive' 
+	   from `tabRBF Data` a , `tabService Detail` b where a.name= b.parent 
 	  and Date(a.date) between %s and %s """,(date,date2),as_dict=True)
 
 

@@ -39,5 +39,17 @@ def get_data():
 				},
 			]
 			
+		},
+		{
+			"label": _("Report"),
+			"items": [
+				{
+					"type": "page",
+					"name": "pivot_rpf",
+					"label": _("Pivot Report"),
+					"onboard": 1,
+				}
+			]
+
 		}
 	]
